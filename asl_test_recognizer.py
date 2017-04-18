@@ -1,4 +1,4 @@
-from unittest import TestCase
+from unittest import TestCase, skip
 
 from asl_data import AslDb
 from asl_utils import train_all_words
