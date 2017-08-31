@@ -90,7 +90,8 @@ class SelectorBIC(ModelSelector):
                 p = n ** 2 + 2 * n * d - 1
 
                 # calculates BIC score
-                bic_score = (-2 * logL + p * math.log(n))
+                bic_score = (-2 * logL + p * math.log(len(self.sequences)))
+
                 if min_bic_score is None or min_bic_score > bic_score:
                     min_bic_score = bic_score
                     min_model = model
